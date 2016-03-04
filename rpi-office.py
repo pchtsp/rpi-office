@@ -21,6 +21,8 @@ def hello_world():
 def turn_light_on():
     GPIO.output(num_pin, True)
     data = "prueba de encendido"
+    time.sleep(1)
+    GPIO.output(num_pin, False)
     return jsonify(result=data)
 
 @app.route('/turn_light_off')
